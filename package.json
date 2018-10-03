@@ -1,0 +1,49 @@
+{
+  "name": "key_phrase_commenter_and_assigner",
+  "version": "1.0.0",
+  "description": "Will auto comment when someone says I want to help and other key phrases with welcome info and will assign that user to the issue",
+  "author": "Georgia Rust <grust101@github.com>",
+  "license": "ISC",
+  "repository": "https://github.com/grust101/probot-auto-comment-assign.git",
+  "homepage": "https://github.com/grust101/probot-auto-comment-assign",
+  "bugs": "https://github.com/grust101/probot-auto-comment-assign/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "probot": "^7.2.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "nodemon": "^1.18.4",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  }
+}
